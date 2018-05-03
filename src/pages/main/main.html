@@ -1,0 +1,43 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "pink2" dir="rtl">
+    <ion-title>الصفحة الرئسيه</ion-title>
+    <ion-buttons start>
+        <button ion-button icon-only navPush="ParentPage">
+          <ion-icon name='contact'></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding dir="rtl"> 
+
+    <ion-list>
+    
+      <ion-item color="f4f4f4" round *ngFor="let child of childrenRes">
+        <img src="" > 
+        {{child.name}}
+        <button ion-button item-end outline icon-start color="red">
+          <ion-icon name='alert' ></ion-icon>
+          ارسال استغاثه
+        </button>
+      </ion-item>
+
+      </ion-list>
+
+      <ion-list>
+          <button ion-button color="pink" full round navPush="RegisterPage"> <ion-icon name="ios-help-buoy" > </ion-icon>
+            طلب مساعده   </button>
+          <button ion-button color="gray1" full round navPush="MainPage">  <ion-icon name="navigate"></ion-icon> اماكن المستشفيات </button>
+          <button ion-button color="signin" full round navPush="MainPage">   <ion-icon name="information-circle"></ion-icon> معلومات عامة </button>
+          
+      </ion-list>
+</ion-content>
